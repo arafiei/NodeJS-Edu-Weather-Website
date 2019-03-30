@@ -11,7 +11,7 @@ const forcast =  (latitude,longitude,callback) => {
             }
             else {
                 callback(undefined,' It is currently ' +
-                 body.currently.temperature + ' degrees.' + body.daily.data[0].summary + 'There is a ' + body.currently.precipProbability + '%  chance of rain. ' )
+                 body.currently.temperature + ' degrees out.' + body.daily.data[0].summary + 'The high today is'+body.daily.data[0].temperatureHigh+' with a low of '+body.daily.data[0].temperatureLow+'. There is a ' + body.currently.precipProbability + '%  chance of rain.\n '+' WindSpeed: '+body.daily.data[0].windSpeed+', WindGust :'+ body.daily.data[0].windGust+ ' KM/h. UV-index: '+body.daily.data[0].uvIndex +' and Visibility: '+ body.daily.data[0].visibility)
         
             }
         })
